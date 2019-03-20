@@ -784,6 +784,11 @@ body.page .main-navigation {
   font-size: 1em;
 }
 
+body {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(#53788A));
+  background-image: linear-gradient(white, #53788A);
+}
+
 @-webkit-keyframes anim1 {
   from {
     -webkit-transform: translateY(-100vh) rotateX(0deg);
