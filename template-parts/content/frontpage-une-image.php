@@ -15,12 +15,14 @@
 		<?php
 			$image = get_field('mon_image');
 			$size = 'thumbnail'; // (thumbnail, medium, large, full or custom size)
-			if( $image ) {
+			if( $image ) {?>
+				<a href="<?php the_permalink(); ?>"><?php
 				echo wp_get_attachment_image( $image, $size );
 			}
 		?>
+		</a>
 		<figcaption>
-		<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+		<?php the_title(); ?>
 		</figcaption>
     </figure>
     <div class="wp-block-media-text__content">

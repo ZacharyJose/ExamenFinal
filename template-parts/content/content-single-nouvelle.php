@@ -21,13 +21,15 @@
 	<div class="entry-content">
 		<div class="wp-block-media-text alignwide" style="grid-template-columns:30% auto">
 			<figure class="wp-block-media-text__media">
+			<a href="<?php the_permalink(); ?>">
 			<?php
 				$image = get_field('mon_image');
-				$size = 'thumbnail'; // (thumbnail, medium, large, full or custom size)
+				$size = 'full'; // (thumbnail, medium, large, full or custom size)
 				if( $image ) {
 					echo wp_get_attachment_image( $image, $size );
 				}
 			?>
+			</a>
 			</figure>
 			<div class="wp-block-media-text__content">
 				<?php
